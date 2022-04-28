@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<head>
+   <h1 align="center"><u> Productividad publicaciones por año grupos de investigación</u></h1>
+   <p align="center"> Aplicacion desarrollada por: Juan David Rosero Torres, Julieth Tatiana Riaño Mora</p>
+                        
+                                                
+</head>
+<style>
+    text {
+    font: 10px sans-serif;
+  }
+  
+  button{
+    font: 10px sans-serif;
+      
+  }
+  
+  rect.background {
+    fill: white;
+    stroke: #646464;
+    stroke-width: 1px;
+    stroke-dasharray: 2,2;
+    stroke-linejoin: round;
+  }
+  
+  .axis {
+    shape-rendering: crispEdges;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+  }
+  
+  .left-div {
+    float:left;
+    height: 520px;
+    width: 750px;
+    
+  }
+  .right-div {
+    float:right;
+    height: 520px;
+    width: 750px;
+    
+  }
+</style>
+
+<form method="post" onSubmit="showGroup()">
+    <input name="Group_field" id="CountrySel"  placeholder="Enter Group name" >
+    <input type="submit" value="Submit" >
+
+</form>
+
+
+<body>
+<p> <b>Country selected : {{Grupo}}</b> </p>
+<p><b> Year selected : {{Year}}</b> </p>
+
+  
+<div class="left-div" id="graphDiv" style="border: thin solid black">
+<p><b><i> Producción de publicaciones por año grupo: {{Grupo}}</b><br>
+                                        <br>
+ </i></p>
+</div>
+
+
+
+    
+<script type="module">
+
+  import define from "./pruebas/ecf17f0db6770d2a@419.js";
+  import {Runtime, Library, Inspector} from "./pruebas/runtime.js";
+  
+  const runtime = new Runtime();
+  const main = runtime.module(define, Inspector.into(document.getElementById("graphDiv")));
+  
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://d3js.org/d3.v3.min.js"></script>
+<link rel="stylesheet" href="styles.css">
+<head>
+   <h1 align="center"><u> Productividad Palabras Frecuentes por Grupo en Español</u></h1>
+   <p align="center"> Aplicacion desarrollada por: Juan David Rosero Torres, Julieth Tatiana Riaño Mora</p>
+                        
+                                                
+</head>
+<style>
+    text {
+    font: 10px sans-serif;
+  }
+  
+  button{
+    font: 10px sans-serif;
+      
+  }
+  
+  rect.background {
+    fill: white;
+    stroke: #646464;
+    stroke-width: 1px;
+    stroke-dasharray: 2,2;
+    stroke-linejoin: round;
+  }
+  
+  .axis {
+    shape-rendering: crispEdges;
+  }
+  
+  .axis path,
+  .axis line {
+    fill: none;
+    stroke: #000;
+  }
+  
+  .left-div {
+    float:left;
+    height: 520px;
+    width: 750px;
+    
+  }
+  .right-div {
+    float:right;
+    height: 520px;
+    width: 750px;
+    
+  }
+</style>
+
+
+
+
+<body>
+
+
+  
+<div class="center-div" id="graphDiv" style="border: thin solid black">
+
+</div>
+
+    
+<script type="module">
+
+  import define from "./pruebas/86ddbc29bd33f9d6@357.js";
+  import {Runtime, Library, Inspector} from "./pruebas/runtime.js";
+  
+  const runtime = new Runtime();
+  const main = runtime.module(define, Inspector.into(document.getElementById("graphDiv")));
+  
+  </script>
+ 
+
+</body>
+</html>
